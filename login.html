@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+ 
+    <title>Read Our Blog</title>
+  </head>
+  <body id="home">
+    <header class="hero contact">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-book-open"></i></span
+          >
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+           
+            <li><a href="blog.html">Blog</a></li>
+            <li>List of Books
+            <ul>
+              <li><a href="#"><strong>History</strong></a>
+              </li>
+              <li><a href="#"><strong>Science</strong></a></li>
+              <li><a href="#"><strong>Literature</strong></a></li>
+              <li><a href="#"><strong>Philosophy</strong></a></li>
+              <li><a href="#"><strong>Other</strong></a></li>
+            </ul>
+            
+            
+            </li>
+            
+            
+           
+            
+            <li><a href="contact.html">Contact</a></li>
+           <li><a href="login.html"> Login </a></li>
+          </ul>
+          
+        </nav>
+      </div>
+
+    </header>
+    
+
+
+
+    <form action="action_page.php" method="post">
+      
+    
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Sign up</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+   
+  <section id="contact-info" class="bg-dark">
+    <div class="container">
+      <div class="box">
+        <i class="fas fa-hotel fa-3x"></i>
+        <h3>Location</h3>
+        <p>St. Ahmet Uka 6</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-phone fa-3x"></i>
+        <h3>Phone Number</h3>
+        <p>+38344555666</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-envelope fa-3x"></i>
+        <h3>
+          Email adress
+        </h3>
+        <p>kosovaa@hotmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="https://www.linkedin.com"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 - Travel in the book</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    };
+  </script>
+</body>
+</html>
